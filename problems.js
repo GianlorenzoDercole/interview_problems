@@ -123,35 +123,87 @@
 
 
 
-const longestPalandrome = function(s){
-    let sarray = s.split('')
-    let narray = []
-    let n = 1
-    for (let i = 0; i < sarray.length ; i++) {
-        if (sarray[i] === sarray[i-1] && sarray[i] !== sarray[i+1]){
-            narray.push(sarray[i-1] + sarray[i])
+// const longestPalandrome = function(s){
+//     let sarray = s.split('')
+//     let narray = []
+//     let n = 1
+//     for (let i = 0; i < sarray.length ; i++) {
+//         if (sarray[i] === sarray[i-1] && sarray[i] !== sarray[i+1]){
+//             narray.push(sarray[i-1] + sarray[i])
+//         }
+//         if (sarray[i] === sarray[i+1] && sarray[i] !== sarray[i-1]){
+//             narray.push(sarray[i] + sarray[i+1])
+//         }
+//     }
+
+//     for (let i = 0; i < sarray.length ; i++) {
+//         let check = function(){
+//             if (sarray[i-n] === sarray[i+n] && sarray[i-n] !== undefined){
+//                 o = sarray.slice((i-n),(i+(n + 1)))
+//                 narray.push(o.join(''))
+//                 n += 1
+
+//             }
+//         }
+//         if (sarray[i-n] === sarray[i+n] && sarray[i-n] !== undefined){
+//             o = sarray.slice((i-n),(i+(n + 1)))
+//             narray.push(o.join(''))
+//             n += 1
+
+//         }
+//     }
+//     console.log(narray)
+// }
+// longestPalandrome('vbaarabv')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+
+
+
+
+
+
+let removeDuplicates = function(nums) {
+    narray = []
+    for (let i = 0; i < nums.length; i++){
+        if (!narray.includes(nums[i])){
+            narray.push(nums[i])
         }
-        if (sarray[i] === sarray[i+1] && sarray[i] !== sarray[i-1]){
-            narray.push(sarray[i] + sarray[i+1])
+        else{
+            nums[i] = '-'
         }
     }
-
-    for (let i = 0; i < sarray.length ; i++) {
-        let check = function(){
-            if (sarray[i-n] === sarray[i+n] && sarray[i-n] !== undefined){
-                o = sarray.slice((i-n),(i+(n + 1)))
-                narray.push(o.join(''))
-                n += 1
-
-            }
-        }
-        if (sarray[i-n] === sarray[i+n] && sarray[i-n] !== undefined){
-            o = sarray.slice((i-n),(i+(n + 1)))
-            narray.push(o.join(''))
-            n += 1
-
-        }
-    }
+    console.log(nums)
     console.log(narray)
+
 }
-longestPalandrome('vbaarabv')
+removeDuplicates([1,1,2,2,3,4,5])
